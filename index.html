@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="">
+  <meta property="og:title" content="LLM4Kube" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+
+  <title>LLM4KUBE</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LLM4Kube
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a target="_blank">Shubham Parashar</a>,</span>
+              <span class="author-block">
+                <a target="_blank">Sabuj Laskar</a>,</span>
+              <span class="author-block">
+                <a target="_blank">Deepak Kumar</a>,</span>
+              <span class="author-block">
+                <a target="_blank">Vivek Narukurthi</a></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Texas A&M University<br></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/shubhamprshr27/LLM4Kube" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p style="text-align: justify;">
+              Kubernetes, an open-source platform for automating the deployment, scaling, and management of containerized applications, plays a pivotal role in modern software engineering and DevOps. As Kubernetes clusters become complex, troubleshooting of failures is critical for DevOps practitioners. This paper introduces a method that utilizes Large Language Models (LLMs) to analyze Kubernetes logs, aiding in the troubleshooting and identification of bugs in Kubernetes environments. Our proof of concept demonstrates LLMs' potential to automate application monitoring, and we hope the community can build on this insight and leverage LLMs for this task.
+            </p>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Introduction</h2>
+          <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+            As organizations adopt Kubernetes for workload deployment, the complexity of Kubernetes clusters increases, necessitating efficient troubleshooting for system reliability. This paper proposes leveraging Kubernetes logs and Large Language Models (LLMs) to automate troubleshooting, expediting the identification of affected services and offering actionable insights.
+          </p>
+          <hr> <!-- Line break -->
+          <div class="content has-text-justified">
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/goal.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <br> <!-- Line break -->
+              <img src="static/images/motivation.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <br> <!-- Line break -->
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                As organizations adopt Kubernetes for workload deployment, the complexity of Kubernetes clusters increases, necessitating efficient troubleshooting for system reliability. This paper proposes leveraging Kubernetes logs and Large Language Models (LLMs) to automate troubleshooting, expediting the identification of affected services and offering actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Challenges</h2>
+          <ul style="list-style-type: disc; text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+            <li>Scarcity of Data: The absence of publicly available data on DevOps tasks necessitated the generation of our own datasets.</li>
+            <li>Manual Annotation: Annotating data manually proved to be a time-consuming task, susceptible to human error if not executed meticulously.</li>
+            <li>Simulation Limitations: Due to the constrained size of the architecture utilized, we faced challenges in accurately simulating real-world scenarios, such as payment failures or other user-related issues.</li>
+          </ul>
+          <!-- <h2 class="title is-4">Strong Correlation of Concept Frequency and Accuracy</h2> -->
+          <div class="content has-text-justified">
+            <div class="item">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+
+  <!-- Prompt Inversion -->
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Simulation Setup</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our technique involves teaching LLMs about the architecture and services affected due to the failure of one service. This enables LLMs to efficiently analyze logs, determine the severity of service failures, and identify the services impacted by the failure of a single service.             </p>
+          </div>
+          <h2 class="title is-4">Architecture</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/architecture.png" alt="1"
+                style="height: auto; display: block; margin: 10px;">
+
+            </div>
+            <h2 class="title is-4">Annotation</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/annotation.png" alt="1"
+                  style="height: auto; display: block; margin: 10px;">
+
+            </div>
+            <h2 class="title is-4">Data Generation</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/data_get.png" alt="1"
+                  style="height: auto; display: block; margin: 10px;">
+                <p>
+                  In instances where access to company-specific logs are restricted, we innovatively employ LLMs for data augmentation. Leveraging original logs as references, we task LLMs with generating synthetic logs to enrich our dataset. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Prompt Inversion -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Experiments</h2>
+          <div class="content has-text-justified">
+            <p>
+              We did a couple of experiments using zero shot, few shot, and few shot chain of thought on different LLMs to compare their performances.</p>
+          </div>
+          <h2 class="title is-5">Zero Shot</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/zero_shot.png" alt="1"
+                style="height: auto; display: block; margin: 10px;">
+
+            </div>
+            <br> <!-- Line break -->
+            <div class="content has-text-justified">
+              <p>
+              We fed our architecture asking the LLM to learn it and then asked it questions about our logs.</p>
+            </div>
+            <br>
+            <h2 class="title is-5">Few Shot</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/few_shot.png" alt="1"
+                  style="height: auto; display: block; margin: 10px;">
+
+            </div>
+            <br>
+            <div class="content has-text-justified">
+              <p>
+              We gave it a little assistance by giving it an answer for three different scenarios and then asked it questions about our logs and stack trace.</p>
+            </div>
+            <br> <!-- Line break -->
+            <h2 class="title is-5">Few Shot Chain of Thought</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/chain_of_thought.png" alt="1"
+                  style="height: auto; display: block; margin: 10px;">
+            </div>
+            <br>
+            <div class="content has-text-justified">
+              <p>
+              Alongside doing everything we did for few shot, we asked it to think about the solution step by step.</p>
+            </div>
+            <br> <!-- Line break -->
+            <h2 class="title is-5">Results</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/tableresults.jpg" alt="1"
+                  style="height: auto; display: block; margin: 10px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section hero is-light2">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Future Work</h2>
+        <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+        We have explored just one aspect of DevOps; there is scope for this sort of work in many other aspects. The possibilities are endless.</p>
+        <hr> <!-- Line break -->
+        <div class="content has-text-justified">
+          <div class="item">
+            <!-- Your image here -->
+            <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+            <img src="static/images/futurework.jpg" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+            <br> <!-- Line break -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Thank you -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Thank You :)</h2>
+          <div class="content has-text-justified">
+            <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+              We appreciate your attention and interest in our work. If you have any further questions or feedback, please feel free to reach out.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Thank you section -->
+
+</body>
+
+</html>
